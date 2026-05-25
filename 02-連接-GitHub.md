@@ -289,7 +289,8 @@ Set-Location "$env:USERPROFILE\Documents\github-test"
 
 ```powershell
 git init
-git add .
+git status --short
+git add index.html README.md
 git commit -m "建立 GitHub 連線測試頁"
 gh repo create github-test --public --source=. --push
 ```
@@ -336,7 +337,10 @@ gh repo delete github-test --yes
 如果要刪除本機測試資料夾：
 
 ```powershell
-Remove-Item -LiteralPath "$env:USERPROFILE\Documents\github-test" -Recurse -Force
+$target = Join-Path $env:USERPROFILE "Documents\github-test"
+if ((Test-Path -LiteralPath $target) -and ((Resolve-Path $target).Path -eq (Join-Path $env:USERPROFILE "Documents\github-test"))) {
+    Remove-Item -LiteralPath $target -Recurse -Force
+}
 ```
 
 ---

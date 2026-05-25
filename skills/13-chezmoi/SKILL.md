@@ -19,7 +19,11 @@ chezmoi add ~/.codex/skills/xxx
 
 ## 推送
 ```bash
-chezmoi cd && git add . && git commit -m "..." && git push
+chezmoi cd
+git status --short
+git add dot_codex/AGENTS.md dot_codex/skills/<本次修改的skill>
+git commit -m "..."
+git push
 ```
 
 ## 另一台電腦同步

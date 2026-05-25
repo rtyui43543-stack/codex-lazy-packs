@@ -53,7 +53,7 @@
 > - **Project URL**（`https://xxxxxxxx.supabase.co`）
 > - **service_role key**（點 Reveal 複製）
 >
-> ⚠️ service_role key 有完整權限，不要分享、不要進公開 repo。
+> ⚠️ service_role key 有完整權限，只能存在本機 Codex 設定或環境變數；不要貼進 Markdown、AGENTS.md、Obsidian 對外筆記或公開 repo。
 
 把這兩個值給 Codex。
 
@@ -199,7 +199,7 @@ Supabase 免費專案閒置一週會自動暫停。
 
 ## 安全
 
-- service_role key 不要進公開 repo
+- service_role key 不要進公開 repo、Markdown、AGENTS.md 或 Obsidian 對外筆記
 - 示範用假資料，不要放真實學生個資
 - Supabase MCP 適合開發/測試，正式使用注意隱私法規
 
